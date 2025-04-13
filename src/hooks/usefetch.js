@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
+import { axiosInstance } from "../utils";
 
-export function usefetch(url) {
+export function useFetch(url) {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [isPending, setIsPending] = useState(false);
