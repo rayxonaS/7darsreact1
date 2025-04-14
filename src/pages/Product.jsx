@@ -15,7 +15,7 @@ function Product() {
         <img className="product-thubmnail" src={data.thumbnail} alt="" />
         <div className="product-info">
           <h2 className="product-title">{data.title}</h2>
-          <p className="product-price">$ {data.price}</p>
+          <p className="product-price">{data.price}</p>
           <p className="product-description">{data.description}</p>
           <button className="buy-button">Buy Now</button>
         </div>
