@@ -20,30 +20,48 @@ function Product({ product }) {
     );
   };
   return (
-    <Link to={`/product/${product.id}`}>
-      <h2>{product.title}</h2>
+    <Link
+      className=" container bg-white text-gray-800 rounded-xl shadow-md p-4 flex flex-col items-center text-center hover:shadow-lg transition"
+      to={`/product/${product.id}`}
+    >
+      <img
+        className="w-full h-40 object-contain rounded-md mb-4"
+        src={product.thumbnail}
+        alt=""
+      />
+      <h2 className="text-lg font-semibold mb-1">{product.title}</h2>
+      <p className="text-gray-600   mb-3">$ {product.price}</p>
       {isAdded && (
-        <>
+        <div className="flex items-center mt-auto gap-2">
           <button
+            className="bg-gray-200 hover:bg-gray-300 text-gray-800 px-2 py-1 rounded"
             onClick={(e) => {
               e.preventDefault();
-              dispatch(decrementAmount(product.id));
+              dispatch(decrementAmount({ id: product.id }));
             }}
           >
             -
           </button>
-          <span>{isAdded.amount}</span>
+          <span className="font-medium">{isAdded.amount}</span>
           <button
+            className="bg-gray-200 hover:bg-gray-300 text-gray-800 px-2 py-1 rounded"
             onClick={(e) => {
               e.preventDefault();
-              dispatch(incrementAmount(product.id));
+              dispatch(incrementAmount({ id: product.id }));
             }}
           >
             +
           </button>
-        </>
+        </div>
       )}
-      {!isAdded && <button onClick={(e) => handleBuy(e)}>Buy</button>}
+      {!isAdded && (
+        <button
+          className="mt-auto bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          onClick={(e) => handleBuy(e)}
+        >
+          Buy
+        </button>
+      )}
     </Link>
   );
 }
