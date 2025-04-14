@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 function Navbar() {
   const { cart } = useSelector((store) => store.cart);
   return (
-    <div className=" container flex gap-60">
+    <div className=" container flex gap-60 mt-5">
       <div className="flex items-center space-x-3">
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1xwEZtCsextV_Vh5QCPt7GdN0jglJLZ6yqA&s"
