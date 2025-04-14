@@ -7,7 +7,7 @@ function Navbar() {
     <div className=" container flex gap-60">
       <div className="flex items-center space-x-3">
         <img
-          src="/logo.png"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1xwEZtCsextV_Vh5QCPt7GdN0jglJLZ6yqA&s"
           alt="Logo"
           className="w-10 h-10 rounded-full object-cover"
         />
